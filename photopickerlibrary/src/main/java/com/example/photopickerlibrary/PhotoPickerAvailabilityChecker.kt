@@ -14,9 +14,9 @@ object PhotoPickerAvailabilityChecker {
             /*return true of Android 13*/
             Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU -> true
             /*return true for Android 12 and 11 except Android 11,12 go devices*/
-            /*Build.VERSION.SDK_INT >= Build.VERSION_CODES.R -> {
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.R -> {
                 getExtensionVersion(Build.VERSION_CODES.R) >= ANDROID_R_REQUIRED_EXTENSION_VERSION
-            }*/
+            }
             else -> false
         }
 
